@@ -1,0 +1,1961 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20202.20.0415.1946                               -->
+<workbook original-version='18.1' source-build='2020.2.0 (20202.20.0415.1946)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='FriendsAnalysis' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='friends' inline='true' name='federated.1r00e0u0kxm28b13azn3b01htrr7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='127.0.0.1' name='mysql.1r85trf0oof81d1cdapcd1jfh6ch'>
+            <connection class='mysql' dbname='friends' odbc-native-protocol='' one-time-sql='' port='3306' server='127.0.0.1' source-charset='' username='root' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mysql.1r85trf0oof81d1cdapcd1jfh6ch' name='aggregate_season' table='[aggregate_season]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='mysql.1r85trf0oof81d1cdapcd1jfh6ch' name='aggregate_season' table='[aggregate_season]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>season_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[season_id]</local-name>
+            <parent-name>[aggregate_season]</parent-name>
+            <remote-alias>season_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[aggregate_season_730066AF00B4440BBDA54BB8AE7E44A2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>characters</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[characters]</local-name>
+            <parent-name>[aggregate_season]</parent-name>
+            <remote-alias>characters</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>500</width>
+            <contains-null>false</contains-null>
+            <collation charset='296' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[aggregate_season_730066AF00B4440BBDA54BB8AE7E44A2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>metric</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[metric]</local-name>
+            <parent-name>[aggregate_season]</parent-name>
+            <remote-alias>metric</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>false</contains-null>
+            <collation charset='296' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[aggregate_season_730066AF00B4440BBDA54BB8AE7E44A2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[value]</local-name>
+            <parent-name>[aggregate_season]</parent-name>
+            <remote-alias>value</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[aggregate_season_730066AF00B4440BBDA54BB8AE7E44A2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='X-axis' datatype='integer' name='[Calculation_2727211105854668805]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Y-axis' datatype='integer' name='[Calculation_2727211105854767110]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='aggregate_season' datatype='table' name='[__tableau_internal_object_id__].[aggregate_season_730066AF00B4440BBDA54BB8AE7E44A2]' role='measure' type='quantitative' />
+      <column caption='Characters' datatype='string' name='[characters]' role='dimension' type='nominal' />
+      <column caption='Metric' datatype='string' name='[metric]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Season Id' datatype='integer' name='[season_id]' role='dimension' type='ordinal' />
+      <column datatype='real' datatype-customized='true' name='[value]' role='measure' type='quantitative' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[characters]' derivation='None' name='[none:characters:nk]' pivot='key' type='nominal' />
+      <column-instance column='[metric]' derivation='None' name='[none:metric:nk]' pivot='key' type='nominal' />
+      <mapped-images>
+        <mapped-image caption='Chandler_most_common' expression='file:///C:/Users/prath/Desktop/Practice/Friends TV Series Analysis/Chandler_most_common.png' name='[MappedImage1]'>
+          <mapping bottom='0' left='0' right='1' top='1' x='[Calculation_2727211105854668805]' y='[Calculation_2727211105854767110]' />
+          <groupfilter function='crossjoin'>
+            <groupfilter function='member' level='[characters]' member='&quot;Chandler&quot;' />
+          </groupfilter>
+        </mapped-image>
+        <mapped-image caption='Joey_most_common' expression='file:///C:/Users/prath/Desktop/Practice/Friends TV Series Analysis/Joey_most_common.png' name='[MappedImage2]'>
+          <mapping bottom='0' left='0' right='1' top='1' x='[Calculation_2727211105854668805]' y='[Calculation_2727211105854767110]' />
+          <image-options show-entire-image='true' />
+          <groupfilter function='crossjoin'>
+            <groupfilter function='member' level='[characters]' member='&quot;Joey&quot;' />
+          </groupfilter>
+        </mapped-image>
+        <mapped-image caption='Monica_most_common' expression='file:///C:/Users/prath/Desktop/Practice/Friends TV Series Analysis/Monica_most_common.png' name='[MappedImage3]'>
+          <mapping bottom='0' left='0' right='1' top='1' x='[Calculation_2727211105854668805]' y='[Calculation_2727211105854767110]' />
+          <image-options show-entire-image='true' />
+          <groupfilter function='crossjoin'>
+            <groupfilter function='member' level='[characters]' member='&quot;Monica&quot;' />
+          </groupfilter>
+        </mapped-image>
+        <mapped-image caption='Phoebe_most_common' expression='file:///C:/Users/prath/Desktop/Practice/Friends TV Series Analysis/Phoebe_most_common.png' name='[MappedImage4]'>
+          <mapping bottom='0' left='0' right='1' top='1' x='[Calculation_2727211105854668805]' y='[Calculation_2727211105854767110]' />
+          <image-options show-entire-image='true' />
+          <groupfilter function='crossjoin'>
+            <groupfilter function='member' level='[characters]' member='&quot;Phoebe&quot;' />
+          </groupfilter>
+        </mapped-image>
+        <mapped-image caption='Rachel_most_common' expression='file:///C:/Users/prath/Desktop/Practice/Friends TV Series Analysis/Rachel_most_common.png' name='[MappedImage5]'>
+          <mapping bottom='0' left='0' right='1' top='1' x='[Calculation_2727211105854668805]' y='[Calculation_2727211105854767110]' />
+          <image-options show-entire-image='true' />
+          <groupfilter function='crossjoin'>
+            <groupfilter function='member' level='[characters]' member='&quot;Rachel&quot;' />
+          </groupfilter>
+        </mapped-image>
+        <mapped-image caption='Ross_most_common' expression='file:///C:/Users/prath/Desktop/Practice/Friends TV Series Analysis/Ross_most_common.png' name='[MappedImage6]'>
+          <mapping bottom='0' left='0' right='1' top='1' x='[Calculation_2727211105854668805]' y='[Calculation_2727211105854767110]' />
+          <image-options show-entire-image='true' />
+          <groupfilter function='crossjoin'>
+            <groupfilter function='member' level='[characters]' member='&quot;Ross&quot;' />
+          </groupfilter>
+        </mapped-image>
+      </mapped-images>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/prath/Desktop/Practice/Friends TV Series Analysis/friends.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='05/30/2020 04:14:20 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='friends' increment-value='%null%' refresh-type='create' rows-inserted='420' timestamp-start='2020-05-30 16:14:20.090' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>season_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[season_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>season_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>aggregate_season</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[aggregate_season_730066AF00B4440BBDA54BB8AE7E44A2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>characters</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[characters]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>characters</remote-alias>
+              <ordinal>1</ordinal>
+              <family>aggregate_season</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LROOT_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[aggregate_season_730066AF00B4440BBDA54BB8AE7E44A2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>metric</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[metric]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>metric</remote-alias>
+              <ordinal>2</ordinal>
+              <family>aggregate_season</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LROOT_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[aggregate_season_730066AF00B4440BBDA54BB8AE7E44A2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>value</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>value</remote-alias>
+              <ordinal>3</ordinal>
+              <family>aggregate_season</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>378</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[aggregate_season_730066AF00B4440BBDA54BB8AE7E44A2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:characters:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Chandler&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Rachel&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Phoebe&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Monica&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Ross&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Joey&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:metric:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;EMOTION_ANGER&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;EMOTION_SADNESS&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;EMOTION_JOY&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;EMOTION_FEAR&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;EMOTION_DISGUST&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='aggregate_season' id='aggregate_season_730066AF00B4440BBDA54BB8AE7E44A2'>
+            <properties context=''>
+              <relation connection='mysql.1r85trf0oof81d1cdapcd1jfh6ch' name='aggregate_season' table='[aggregate_season]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='dialogues' inline='true' name='federated.1y26qts1vw8sqw17sqg9y1lfq45g' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='127.0.0.1' name='mysql.0dqcazw0drz3u613byle21ed729k'>
+            <connection class='mysql' dbname='friends' odbc-native-protocol='' one-time-sql='' port='3306' server='127.0.0.1' source-charset='' username='root' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mysql.0dqcazw0drz3u613byle21ed729k' name='dialogues' table='[dialogues]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='mysql.0dqcazw0drz3u613byle21ed729k' name='dialogues' table='[dialogues]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>season_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[season_id]</local-name>
+            <parent-name>[dialogues]</parent-name>
+            <remote-alias>season_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dialogues_EF3B2CCAEB1847B1946A5B9A71A6E2B5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>episode_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[episode_id]</local-name>
+            <parent-name>[dialogues]</parent-name>
+            <remote-alias>episode_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dialogues_EF3B2CCAEB1847B1946A5B9A71A6E2B5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dialogue_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[dialogue_id]</local-name>
+            <parent-name>[dialogues]</parent-name>
+            <remote-alias>dialogue_id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dialogues_EF3B2CCAEB1847B1946A5B9A71A6E2B5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dialogue</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[dialogue]</local-name>
+            <parent-name>[dialogues]</parent-name>
+            <remote-alias>dialogue</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16383</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dialogues_EF3B2CCAEB1847B1946A5B9A71A6E2B5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>characters</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[characters]</local-name>
+            <parent-name>[dialogues]</parent-name>
+            <remote-alias>characters</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>500</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dialogues_EF3B2CCAEB1847B1946A5B9A71A6E2B5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='dialogues' datatype='table' name='[__tableau_internal_object_id__].[dialogues_EF3B2CCAEB1847B1946A5B9A71A6E2B5]' role='measure' type='quantitative' />
+      <column caption='Characters' datatype='string' name='[characters]' role='dimension' type='nominal' />
+      <column caption='Dialogue' datatype='string' name='[dialogue]' role='dimension' type='nominal' />
+      <column caption='Dialogue Id' datatype='integer' name='[dialogue_id]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Episode Id' datatype='integer' name='[episode_id]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Season Id' datatype='integer' name='[season_id]' role='dimension' type='ordinal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/prath/Desktop/Practice/Friends TV Series Analysis/dialogues.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='05/30/2020 04:14:07 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='dialogues' increment-value='%null%' refresh-type='create' rows-inserted='67920' timestamp-start='2020-05-30 16:14:07.427' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>season_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[season_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>season_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>dialogues</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dialogues_EF3B2CCAEB1847B1946A5B9A71A6E2B5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>episode_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[episode_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>episode_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>dialogues</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>false</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dialogues_EF3B2CCAEB1847B1946A5B9A71A6E2B5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dialogue_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[dialogue_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dialogue_id</remote-alias>
+              <ordinal>2</ordinal>
+              <family>dialogues</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1415</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dialogues_EF3B2CCAEB1847B1946A5B9A71A6E2B5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dialogue</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[dialogue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dialogue</remote-alias>
+              <ordinal>3</ordinal>
+              <family>dialogues</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>24916</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LROOT_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dialogues_EF3B2CCAEB1847B1946A5B9A71A6E2B5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>characters</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[characters]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>characters</remote-alias>
+              <ordinal>4</ordinal>
+              <family>dialogues</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1074</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LROOT_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dialogues_EF3B2CCAEB1847B1946A5B9A71A6E2B5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='dialogues' id='dialogues_EF3B2CCAEB1847B1946A5B9A71A6E2B5'>
+            <properties context=''>
+              <relation connection='mysql.0dqcazw0drz3u613byle21ed729k' name='dialogues' table='[dialogues]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='% share'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>% share of dialogues</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='friends' name='federated.1r00e0u0kxm28b13azn3b01htrr7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r00e0u0kxm28b13azn3b01htrr7'>
+            <column caption='Characters' datatype='string' name='[characters]' role='dimension' type='nominal' />
+            <column caption='Metric' datatype='string' name='[metric]' role='dimension' type='nominal' />
+            <column-instance column='[characters]' derivation='None' name='[none:characters:nk]' pivot='key' type='nominal' />
+            <column-instance column='[metric]' derivation='None' name='[none:metric:nk]' pivot='key' type='nominal' />
+            <column-instance column='[season_id]' derivation='None' name='[none:season_id:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Season Id' datatype='integer' name='[season_id]' role='dimension' type='ordinal' />
+            <column-instance column='[value]' derivation='Sum' name='[sum:value:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[value]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' filter-group='5'>
+            <groupfilter function='member' level='[none:characters:nk]' member='&quot;Chandler&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]'>
+            <groupfilter function='member' level='[none:metric:nk]' member='&quot;PER_SHARE_DIALOGUES&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]</column>
+            <column>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+        </panes>
+        <rows>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</rows>
+        <cols>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</cols>
+      </table>
+      <simple-id uuid='{59429852-5576-4515-AE18-E6C730E3A45D}' />
+    </worksheet>
+    <worksheet name='CMP_EMOTION_DISGUST'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Emotion - Disgust</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='friends' name='federated.1r00e0u0kxm28b13azn3b01htrr7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r00e0u0kxm28b13azn3b01htrr7'>
+            <column caption='Characters' datatype='string' name='[characters]' role='dimension' type='nominal' />
+            <column caption='Metric' datatype='string' name='[metric]' role='dimension' type='nominal' />
+            <column-instance column='[characters]' derivation='None' name='[none:characters:nk]' pivot='key' type='nominal' />
+            <column-instance column='[metric]' derivation='None' name='[none:metric:nk]' pivot='key' type='nominal' />
+            <column-instance column='[season_id]' derivation='None' name='[none:season_id:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Season Id' datatype='integer' name='[season_id]' role='dimension' type='ordinal' />
+            <column-instance column='[value]' derivation='Sum' name='[sum:value:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[value]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]'>
+            <groupfilter function='member' level='[none:metric:nk]' member='&quot;EMOTION_DISGUST&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.60000002384185791' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</rows>
+        <cols>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</cols>
+      </table>
+      <simple-id uuid='{A35AE8C6-559A-479D-A262-69D50097BA8E}' />
+    </worksheet>
+    <worksheet name='CMP_EMOTION_JOY'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Emotion - Joy</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='friends' name='federated.1r00e0u0kxm28b13azn3b01htrr7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r00e0u0kxm28b13azn3b01htrr7'>
+            <column caption='Characters' datatype='string' name='[characters]' role='dimension' type='nominal' />
+            <column caption='Metric' datatype='string' name='[metric]' role='dimension' type='nominal' />
+            <column-instance column='[characters]' derivation='None' name='[none:characters:nk]' pivot='key' type='nominal' />
+            <column-instance column='[metric]' derivation='None' name='[none:metric:nk]' pivot='key' type='nominal' />
+            <column-instance column='[season_id]' derivation='None' name='[none:season_id:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Season Id' datatype='integer' name='[season_id]' role='dimension' type='ordinal' />
+            <column-instance column='[value]' derivation='Sum' name='[sum:value:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[value]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]'>
+            <groupfilter function='member' level='[none:metric:nk]' member='&quot;EMOTION_JOY&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.60000002384185791' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</rows>
+        <cols>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</cols>
+      </table>
+      <simple-id uuid='{D3739258-7502-413D-94EE-444CFC3FA26F}' />
+    </worksheet>
+    <worksheet name='Dialogues'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Total Dialogues Spoken</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='friends' name='federated.1r00e0u0kxm28b13azn3b01htrr7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r00e0u0kxm28b13azn3b01htrr7'>
+            <column caption='Characters' datatype='string' name='[characters]' role='dimension' type='nominal' />
+            <column caption='Metric' datatype='string' name='[metric]' role='dimension' type='nominal' />
+            <column-instance column='[characters]' derivation='None' name='[none:characters:nk]' pivot='key' type='nominal' />
+            <column-instance column='[metric]' derivation='None' name='[none:metric:nk]' pivot='key' type='nominal' />
+            <column-instance column='[season_id]' derivation='None' name='[none:season_id:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Season Id' datatype='integer' name='[season_id]' role='dimension' type='ordinal' />
+            <column-instance column='[value]' derivation='Sum' name='[sum:value:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[value]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' filter-group='5'>
+            <groupfilter function='member' level='[none:characters:nk]' member='&quot;Chandler&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]'>
+            <groupfilter function='member' level='[none:metric:nk]' member='&quot;TOTAL_DIALOGUES&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]</column>
+            <column>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]' value='' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</rows>
+        <cols>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1</value>
+                <value>779.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2</value>
+                <value>786.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>3</value>
+                <value>797.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>4</value>
+                <value>855.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>5</value>
+                <value>936.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>6</value>
+                <value>1002.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>7</value>
+                <value>847.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>8</value>
+                <value>576.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='8' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>9</value>
+                <value>908.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='9' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                  <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>10</value>
+                <value>704.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{29DAF2B3-01D2-47EF-A9AB-01F8F8BD0CCB}' />
+    </worksheet>
+    <worksheet name='Emotion'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Emotion distribution</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='friends' name='federated.1r00e0u0kxm28b13azn3b01htrr7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r00e0u0kxm28b13azn3b01htrr7'>
+            <column caption='Characters' datatype='string' name='[characters]' role='dimension' type='nominal' />
+            <column caption='Metric' datatype='string' name='[metric]' role='dimension' type='nominal' />
+            <column-instance column='[characters]' derivation='None' name='[none:characters:nk]' pivot='key' type='nominal' />
+            <column-instance column='[metric]' derivation='None' name='[none:metric:nk]' pivot='key' type='nominal' />
+            <column-instance column='[season_id]' derivation='None' name='[none:season_id:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Season Id' datatype='integer' name='[season_id]' role='dimension' type='ordinal' />
+            <column-instance column='[value]' derivation='Sum' name='[sum:value:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[value]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' filter-group='5'>
+            <groupfilter function='member' level='[none:characters:nk]' member='&quot;Chandler&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:metric:nk]' member='&quot;EMOTION_ANGER&quot;' />
+              <groupfilter function='member' level='[none:metric:nk]' member='&quot;EMOTION_DISGUST&quot;' />
+              <groupfilter function='member' level='[none:metric:nk]' member='&quot;EMOTION_JOY&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]</column>
+            <column>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='legend-title'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</rows>
+        <cols>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</cols>
+      </table>
+      <simple-id uuid='{C7E2216C-A3C7-4033-923B-62045FE3FACE}' />
+    </worksheet>
+    <worksheet name='Total Dialogues'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Total Dialogues Overall</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='friends' name='federated.1r00e0u0kxm28b13azn3b01htrr7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r00e0u0kxm28b13azn3b01htrr7'>
+            <column caption='Characters' datatype='string' name='[characters]' role='dimension' type='nominal' />
+            <column caption='Metric' datatype='string' name='[metric]' role='dimension' type='nominal' />
+            <column-instance column='[characters]' derivation='None' name='[none:characters:nk]' pivot='key' type='nominal' />
+            <column-instance column='[metric]' derivation='None' name='[none:metric:nk]' pivot='key' type='nominal' />
+            <column-instance column='[value]' derivation='Sum' name='[sum:value:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[value]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' direction='DESC' using='[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]' />
+          <filter class='categorical' column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]'>
+            <groupfilter function='member' level='[none:metric:nk]' member='&quot;TOTAL_DIALOGUES&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]</rows>
+        <cols>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</cols>
+      </table>
+      <simple-id uuid='{CFEA6982-56BF-47DC-BD83-D1B061360532}' />
+    </worksheet>
+    <worksheet name='Word Cloud'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Word Cloud by Characters</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='friends' name='federated.1r00e0u0kxm28b13azn3b01htrr7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r00e0u0kxm28b13azn3b01htrr7'>
+            <column caption='X-axis' datatype='integer' name='[Calculation_2727211105854668805]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Y-axis' datatype='integer' name='[Calculation_2727211105854767110]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Calculation_2727211105854668805]' derivation='Avg' name='[avg:Calculation_2727211105854668805:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2727211105854767110]' derivation='Avg' name='[avg:Calculation_2727211105854767110:qk]' pivot='key' type='quantitative' />
+            <column caption='Characters' datatype='string' name='[characters]' role='dimension' type='nominal' />
+            <column-instance column='[characters]' derivation='None' name='[none:characters:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]'>
+            <groupfilter function='member' level='[none:characters:nk]' member='&quot;Rachel&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1r00e0u0kxm28b13azn3b01htrr7].[avg:Calculation_2727211105854767110:qk]' field-type='quantitative' max='0.95459555411254926' min='0.093436916644778462' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.1r00e0u0kxm28b13azn3b01htrr7].[avg:Calculation_2727211105854668805:qk]' field-type='quantitative' max='0.93666608396924633' min='0.076318693794380624' range-type='fixed' scope='cols' type='space' />
+            <format attr='display' class='0' field='[federated.1r00e0u0kxm28b13azn3b01htrr7].[avg:Calculation_2727211105854767110:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.1r00e0u0kxm28b13azn3b01htrr7].[avg:Calculation_2727211105854668805:qk]' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1r00e0u0kxm28b13azn3b01htrr7].[avg:Calculation_2727211105854767110:qk]</rows>
+        <cols>[federated.1r00e0u0kxm28b13azn3b01htrr7].[avg:Calculation_2727211105854668805:qk]</cols>
+      </table>
+      <simple-id uuid='{E3411FD2-6954-4817-9216-6377C8F42BF1}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='friends' name='federated.1r00e0u0kxm28b13azn3b01htrr7' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1r00e0u0kxm28b13azn3b01htrr7'>
+        <column caption='Characters' datatype='string' name='[characters]' role='dimension' type='nominal' />
+        <column-instance column='[characters]' derivation='None' name='[none:characters:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='7' param='horz' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98000' id='5' w='80800' x='800' y='1000'>
+              <zone h='49000' id='3' name='Emotion' w='80800' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='9' name='Dialogues' w='35385' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='12' name='% share' w='45415' x='36185' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' fixed-size='176' h='98000' id='6' is-fixed='true' param='vert' w='17600' x='81600' y='1000'>
+              <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='11625' id='8' name='Emotion' pane-specification-id='0' param='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]' w='17600' x='81600' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='7625' id='11' mode='dropdown' name='Emotion' param='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' values='database' w='17600' x='81600' y='12625'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='16' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='15' param='vert' w='98400' x='800' y='1000'>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='7625' id='11' mode='dropdown' name='Emotion' param='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' values='database' w='17600' x='81600' y='12625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='3' is-fixed='true' name='Emotion' w='80800' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='11625' id='8' name='Emotion' pane-specification-id='0' param='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]' w='17600' x='81600' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='9' is-fixed='true' name='Dialogues' w='35385' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='12' is-fixed='true' name='% share' w='45415' x='36185' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{A23CF015-5518-435C-8FE2-1E3E4257CDF2}' />
+    </dashboard>
+    <dashboard name='Dashboard 2'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='7' param='horz' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98000' id='5' w='82400' x='800' y='1000'>
+              <zone h='49000' id='3' name='CMP_EMOTION_JOY' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='10' name='CMP_EMOTION_DISGUST' w='82400' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' w='16000' x='83200' y='1000'>
+              <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='19500' id='8' name='CMP_EMOTION_JOY' pane-specification-id='0' param='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='14' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='13' param='vert' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='49000' id='3' is-fixed='true' name='CMP_EMOTION_JOY' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='19500' id='8' name='CMP_EMOTION_JOY' pane-specification-id='0' param='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='10' is-fixed='true' name='CMP_EMOTION_DISGUST' w='82400' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D50FA129-8454-4D1C-A7CF-8E3479E221D7}' />
+    </dashboard>
+    <dashboard name='Dashboard 3'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='friends' name='federated.1r00e0u0kxm28b13azn3b01htrr7' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1r00e0u0kxm28b13azn3b01htrr7'>
+        <column caption='Characters' datatype='string' name='[characters]' role='dimension' type='nominal' />
+        <column-instance column='[characters]' derivation='None' name='[none:characters:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='71250' id='3' name='Word Cloud' w='98600' x='400' y='625' />
+        <zone h='32000' id='4' name='Total Dialogues' w='77800' x='100' y='71000' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='23625' id='5' mode='dropdown' name='Word Cloud' param='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' values='database' w='16000' x='84000' y='625' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='9' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='8' param='vert' w='98400' x='800' y='1000'>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='23625' id='5' mode='dropdown' name='Word Cloud' param='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' values='database' w='16000' x='84000' y='625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='71250' id='3' is-fixed='true' name='Word Cloud' w='98600' x='400' y='625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='256' h='32000' id='4' is-fixed='true' name='Total Dialogues' w='77800' x='100' y='71000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{952D1B93-D596-4CED-8ADB-867DF206363A}' />
+    </dashboard>
+    <dashboard name='Friends Analysis' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98340' id='1' param='vert' removable='false' w='98426' x='787' y='830'>
+            <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' h='4357' id='3' w='98426' x='787' y='830' />
+            <zone _.fcp.SetMembershipControl.false...type='flipboard-nav' _.fcp.SetMembershipControl.true...type-v2='flipboard-nav' h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' w='98426' x='787' y='5187' />
+            <zone _.fcp.SetMembershipControl.false...type='flipboard' _.fcp.SetMembershipControl.true...type-v2='flipboard' h='83506' id='5' paired-zone-id='4' removable='false' w='98426' x='787' y='15664'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Character wise Analysis' captured-sheet='Dashboard 1' id='1'>
+                    <capturedDeltas>
+                      <worksheet name='Emotion'>
+                        <selection-collection />
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Emotion comparison  Characters' captured-sheet='Dashboard 2' id='2' />
+                  <story-point caption='Overall' captured-sheet='Dashboard 3' id='4'>
+                    <capturedDeltas>
+                      <worksheet name='Word Cloud'>
+                        <filter class='categorical' column='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]'>
+                          <groupfilter function='member' level='[none:characters:nk]' member='&quot;Joey&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                        </filter>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1r00e0u0kxm28b13azn3b01htrr7].[avg:Calculation_2727211105854767110:qk]' field-type='quantitative' max='0.95196367414714134' min='0.07331999951832735' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1r00e0u0kxm28b13azn3b01htrr7].[avg:Calculation_2727211105854668805:qk]' field-type='quantitative' max='1.0675480303277234' min='-0.058419683523323718' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{E054CF76-CA91-4080-BD4B-5629A8452930}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='63'>
+    <window class='dashboard' maximized='true' name='Friends Analysis'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{F0A8363D-761F-409C-91B3-CE35F1C74965}' />
+    </window>
+    <window class='worksheet' hidden='true' name='% share'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]</field>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F52C1B61-4DD6-43C0-8EF3-DDBC53A96DAA}' />
+    </window>
+    <window class='worksheet' hidden='true' name='CMP_EMOTION_DISGUST'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]</field>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]</field>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0188DE0E-8C04-46DC-9721-5DCE3B783A37}' />
+    </window>
+    <window class='worksheet' hidden='true' name='CMP_EMOTION_JOY'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]</field>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]</field>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{8BC32966-DD6E-4415-994C-ED93BF996671}' />
+    </window>
+    <window class='dashboard' hidden='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='% share'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Dialogues'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Emotion'>
+          <zoom type='entire-view' />
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                    </x-fields>
+                    <y-fields>
+                      <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                    </y-fields>
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]</field>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+                    <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:qk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>&quot;EMOTION_ANGER&quot;</value>
+                  <value>1</value>
+                  <value>0.42891099999999999</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
+          <highlight field='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{9AA6D926-7DF8-4828-900A-D30424CA295F}' />
+    </window>
+    <window class='dashboard' hidden='true' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='CMP_EMOTION_DISGUST'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='CMP_EMOTION_JOY'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{D01D3E90-007C-4B2E-9A05-7A7C85156F51}' />
+    </window>
+    <window class='dashboard' hidden='true' name='Dashboard 3'>
+      <viewpoints>
+        <viewpoint name='Total Dialogues' />
+        <viewpoint name='Word Cloud'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='4' />
+      <simple-id uuid='{B3322806-24D7-40A3-948F-71E42E154DAA}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Dialogues'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]</field>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]</field>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value (copy)_2727211105531105282:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0C6EDC57-8769-462B-BE8D-A1FF1B532616}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Emotion'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]</field>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{13817AD5-8922-46F7-8ECF-A1181524A92D}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Total Dialogues'>
+      <cards>
+        <edge name='left'>
+          <strip size='132'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]</field>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:metric:nk]</field>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:season_id:ok]</field>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[sum:value:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6F31A965-997F-4E07-BA6B-052CCA92AC7C}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Word Cloud'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1r00e0u0kxm28b13azn3b01htrr7].[none:characters:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1784934E-9740-4F6B-B37F-AB3AD24FA6DA}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Friends Analysis' width='192'>
+      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
+      AABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
